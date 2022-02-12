@@ -16,6 +16,8 @@ en.addEventListener('click', () => {
 ru.addEventListener('click', () => {
   if(en.classList.contains('active')) {en.classList.remove('active');}
   ru.classList.add('active');
+  button.textContent = "Новая цитата" 
+  button.addEventListener('click', getDataJson);
 })
  
 function showImg(data)  {
@@ -23,7 +25,7 @@ img.classList.add('gallery-img')
 img.src = data.urls.regular;
 img.alt = `image`; 
 container.append(img);
-img.style.width = "350px";   
+img.style.width = "200px";   
 }
  
 /*
@@ -44,7 +46,7 @@ getImg();
 
 function showData(data2) {
     p.textContent = data2[Math.floor(Math.random()*data2.length)].text;
-    p.style.fontSize = '24px';
+    p.style.fontSize = '28px';
     p.style.color = "#9f918e";
     p.style.width = "100% - 300px"
     container.append(p);
@@ -56,7 +58,23 @@ async function getData() {
     console.log(data2); 
     showData(data2);
   }
-  getData();
 
-  button.addEventListener('click', getData);
+async function getDataJson()  {
+  const quotes = 'quotes.json';
+  const res = await fetch(quotes);
+  const data3 = await res.json();
+  showData(data3);
+}
+  
+if(ru.classList.contains('active')) {
+  getDataJson();
+}
+else {
+  getData(); }
+
+  if(ru.classList.contains('active')) {  
+    button.addEventListener('click', getDataJson); }
+  else {
+    button.addEventListener('click', getData);
+  }
   button.addEventListener('click', getImg);
