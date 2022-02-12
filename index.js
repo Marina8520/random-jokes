@@ -12,7 +12,7 @@ img.classList.add('gallery-img')
 img.src = data.urls.regular;
 img.alt = `image`; 
 container.append(img);
-img.style.width = "300px";   
+img.style.width = "350px";   
 }
  
 /*
