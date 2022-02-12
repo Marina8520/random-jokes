@@ -1,11 +1,22 @@
 const container = document.querySelector('.container');
 const button = document.querySelector('.btn');
+const en = document.querySelector('.en');
+const ru = document.querySelector('.ru')
 const url = 'https://api.unsplash.com/photos/random?query=fun&client_id=Do42olqenMyCvWlNkjzCGeFDbssllTMl57rssopeupQ'
 const url2 = 'https://type.fit/api/quotes';
 const p = document.createElement('p');
 const img = document.createElement('img');
 const body = document.querySelector('body');
 
+en.addEventListener('click', () => {
+  if(ru.classList.contains('active')) {ru.classList.remove('active');}
+  en.classList.add('active');
+})
+
+ru.addEventListener('click', () => {
+  if(en.classList.contains('active')) {en.classList.remove('active');}
+  ru.classList.add('active');
+})
  
 function showImg(data)  {
 img.classList.add('gallery-img')
