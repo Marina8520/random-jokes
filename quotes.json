@@ -1,30 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Marina8520 
-rolling-scopes-school
-/
-file-storage
-Public
-Code
-Issues
-Pull requests
-Projects
-Wiki
-Security
-Insights
-file-storage/quotes.json
-@irinainina
-irinainina feat: add json file for js-30 task
-Latest commit 9964ed3 17 days ago
- History
- 1 contributor
-402 lines (402 sloc)  20 KB
-  
 [
   {
     "text": "Что разум человека может постигнуть и во что он может поверить, того он способен достичь",
@@ -427,16 +400,3 @@ Latest commit 9964ed3 17 days ago
     "author": "Питер Друкер, американский экономист"
   }
 ]
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
