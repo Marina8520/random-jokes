@@ -15,6 +15,39 @@ body {
 
 }
 
+.header-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 20px;
+    color: #9f918e;
+    margin-right: 30px;
+}
+
+.active {
+    color: #363333; 
+}
+
+.en {
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 5px;
+}
+.en:hover {
+    cursor: pointer;
+    color: #363333;
+}
+
+.ru {
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 5px;
+}
+.ru:hover {
+    cursor: pointer;
+    color: #363333;
+}
+
 .btn { 
     margin-top: 20px;
     font-size: 25px;
