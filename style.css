@@ -59,7 +59,7 @@ body {
 
 .btn:hover { 
     color: #2b2928;
-    background-color: #1d5f5e;
+    background-color: #329694;
     border-color: #2b2928;
 
 }
@@ -67,4 +67,54 @@ body {
 .gallery-img {
     width: 40%;
     height:  40%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    background: #9eb5b9;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    padding-left: 30px;
+}
+
+.copyrigth {
+    padding-right: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.year {
+    padding-right: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.git {
+    color: white;
+    font-size: 20px;
+    transition: 00.3s;
+}
+.git:hover {
+    filter: invert(46%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(52%) contrast(57%);
+}
+
+
+.rss-logo {
+    width: 135px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./assets/svg/rss.svg);
+    padding-right: 30px;
+    transition: 00.3s;
+}
+.rss-logo:hover {
+    filter: invert(46%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(52%) contrast(57%);
 }
