@@ -1,0 +1,37 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cad5d7;
+}
+.container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    flex-direction: column-reverse;
+
+}
+
+.btn { 
+    margin-top: 20px;
+    font-size: 25px;
+    color: #9f918e;
+    background-color: #63c3c2;
+    border-color: #9f918e;
+    cursor: pointer;
+}
+
+.btn:hover { 
+    color: #2b2928;
+    background-color: #1d5f5e;
+    border-color: #2b2928;
+
+}
+
+.gallery-img {
+    width: 40%;
+    height:  40%;
+}
