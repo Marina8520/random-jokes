@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const imgContainer = document.querySelector('.img-container');
 const button = document.querySelector('.btn');
 const en = document.querySelector('.en');
 const ru = document.querySelector('.ru')
@@ -11,21 +12,20 @@ const body = document.querySelector('body');
 en.addEventListener('click', () => {
   if(ru.classList.contains('active')) {ru.classList.remove('active');}
   en.classList.add('active');
+  button.textContent = "New quote";
 })
 
 ru.addEventListener('click', () => {
   if(en.classList.contains('active')) {en.classList.remove('active');}
   ru.classList.add('active');
-  button.textContent = "Новая цитата" 
-  button.addEventListener('click', getDataJson);
+  button.textContent = "Новая цитата";
 })
  
 function showImg(data)  {
-img.classList.add('gallery-img')
-img.src = data.urls.regular;
-img.alt = `image`; 
-container.append(img);
-img.style.width = "200px";   
+  img.src = data.urls.regular;
+  img.alt = `image`; 
+  imgContainer.append(img);
+  img.style.height = '100%';   
 }
  
 /*
@@ -48,33 +48,19 @@ function showData(data2) {
     p.textContent = data2[Math.floor(Math.random()*data2.length)].text;
     p.style.fontSize = '28px';
     p.style.color = "#9f918e";
-    p.style.width = "100% - 300px"
+    p.style.width = "100% - 300px";
     container.append(p);
 };
 
 async function getData() {
-    const res = await fetch(url2);
+    var jsonUrl = ru.classList.contains('active') ? 'quotes.json' : url2;
+    const res = await fetch(jsonUrl);
     const data2 = await res.json();
     console.log(data2); 
     showData(data2);
+    getImg();
   }
-
-async function getDataJson()  {
-  const quotes = 'quotes.json';
-  const res = await fetch(quotes);
-  const data3 = await res.json();
-  showData(data3);
-}
   
-if(ru.classList.contains('active')) {
-  getDataJson();
-}
-else {
-  getData(); }
+getData();
 
-  if(ru.classList.contains('active')) {  
-    button.addEventListener('click', getDataJson); }
-  else {
-    button.addEventListener('click', getData);
-  }
-  button.addEventListener('click', getImg);
+button.addEventListener('click', getData);
